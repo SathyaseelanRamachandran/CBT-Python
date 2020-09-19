@@ -103,14 +103,14 @@ def Cable_Subscription():
          print('Thank you for choosing My TV')
      endprocess()
 def PHCN():
-    input_ref = input('\n Enter reference Identification:')
+    input_ref = input('\n Enter your reference Identification:')
     print('Loading...')
     endprocess()
 #----------------------------------------------------------------------------------------------------
 def acc_login():
     global acc_name
     print('LOGIN')
-    pinVerify = input('Enter pin:')
+    pinVerify = input('Enter pin number please:')
     
     sql = 'SELECT * FROM registration WHERE password = %s'
     adr = (pinVerify,)
