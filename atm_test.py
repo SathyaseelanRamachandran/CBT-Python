@@ -30,7 +30,7 @@ mycursor= mycon.cursor()
 #====================================================================================================
 print('CREATE ACCOUNT')
 acc_name = input('Enter your preferred accountName:')
-pin = input('Enter your preferred 4-digit pin:')
+pin = input('Enter your preferred 4-digit pin to continue:')
 
 sql = 'INSERT INTO registration(username,password) VALUES(%s,%s)'
 val = (acc_name,pin)
@@ -45,7 +45,8 @@ def viewbalance():
 def withdraw():
     global balance
     print('\n1- 500\t 2- 1000 \t 3- 10000\t 4- 20000')
-    choice = (input('\n Enter your choice:'))
+    choice = (input('\n Enter your choice of option :'))
+print ()
     if int(choice ) >= balance[0]:
         print('Insufficient Balance')
     else:
@@ -58,7 +59,7 @@ def withdraw():
         
 def deposit():
     global balance
-    amount = (input('Enter amount to deposit:'))
+    amount = (input('Please enter amount to deposit:'))
     deposit = balance[0] + int(amount)
     balance.insert(0,deposit)
     print('your balance is:',balance[0])
